@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentaires d'écoute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="cadre-gauche">
+        <a href="pages/page4.html" class="button">Voix</a>
+        <a href="pages/page3.html" class="button">Instruments</a>
+        <a href="pages/page2.html" class="button">Effectif</a>
+        <a href="pages/page5.html" class="button">Timbre</a>
+        <a href="pages/page6.html" class="button">Forme (structure)</a>
+        <a href="pages/page7.html" class="button">Harmonie</a>
+        <a href="pages/page8.html" class="button">Procédé d'écriture</a>
+        <a href="pages/page9.html" class="button">Tempo</a>
+        <a href="pages/page10.html" class="button">Rythme</a>
+        <a href="pages/page11.html" class="button">Genre</a>
+        <a href="pages/page12.html" class="button">Dynamique</a>
+        <a href="pages/page1.html" class="button">Styles</a>
+        <a href="pages/page13.html" class="button">Langues</a>
+    </div>
+
+    <!-- Cadre pour les mots sélectionnés, hauteur égale à celle du cadre-gauche -->
+    <div class="cadre-mots" id="cadreMots">
+        <h2>Mots sélectionnés :</h2>
+        <div id="selectedWordsDisplay"></div>
+        <button onclick="clearSelectedWords()">Effacer la sélection</button>
+    </div>
+
+    
+
+
+<div class="cadre bleu">
+ <!-- Cadre bleu pour le commentaire -->
+
+    <textarea id="commentText" placeholder="Écrivez votre commentaire"></textarea>
+    
+    <!-- Bouton "Générer un fichier texte" -->
+    <button class="generate-file-button" id="generateTextButton" onclick="generateTextFile()">Générer un fichier texte</button>
+</div>
+
+
+<div class="commentaire-audio">
+<!-- Conteneur pour les boutons d'enregistrement et le lecteur audio -->
+    <div class="audio-file-container">
+    <!-- Bouton d'enregistrement -->
+    <button id="recordButton" class="button">Enregistrer votre commentaire</button>
+    
+    <!-- Lecteur audio -->
+    <audio id="audioPlayback" controls></audio>
+    </div>
+
+
+<!-- Conteneur pour le nom de fichier et le téléchargement -->
+<div class="buttons-container">
+    
+    <!-- Champ de saisie du nom de fichier -->
+    <input type="text" id="fileName" placeholder="Nommer le fichier audio de votre commentaire" />
+    <!-- Bouton de téléchargement -->
+    <button id="downloadButton">Télécharger votre commentaire enregistré</button>
+</div>
+</div>
+
+<div class="media-container">
+    <!-- Audio player -->
+<div class="audio-player">
+<input type="file" id="audioFile" class="audio-upload" accept="audio/*" />
+<audio id="audioPlayer" class="audio-player" controls>
+    <source id="audioSource" src="" type="audio/mp3" />
+    Votre navigateur ne supporte pas les éléments audio.
+</audio>
+</div>
+<!-- Player YouTube -->
+<div class="cadre youtube-player-container">
+    
+<div id="search-container"class="search-container">
+   
+    <input type="text" id="videoUrl" class="search-input" placeholder="Entrez l'URL de la vidéo YouTube" />
+    <button id="search-button" class="search-button" onclick="loadVideo()">Charger</button>
+</div>
+<iframe class="youtube-player" id="youtubePlayer" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+
+   
+       
+
+       
+    
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

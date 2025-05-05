@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbre</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Ajoutez ces liens dans le <head> pour importer les polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <h1>TIMBRE</h1>
+
+        <div id="categories-container">
+            <div class="category">
+                <h2>Timbre</h2>
+                <div id="category-words">
+                    <span class="selectable" aria-label="Sélectionner timbre">timbre</span>
+                    <span class="selectable" aria-label="Sélectionner timbre instrumental">timbre instrumental</span>
+                    <span class="selectable" aria-label="Sélectionner timbre vocal">timbre vocal</span>
+                    <span class="selectable" aria-label="Sélectionner couleur">couleur</span>
+                    <span class="selectable" aria-label="Sélectionner texture">texture</span>
+                    <span class="selectable" aria-label="Sélectionner spectre sonore">spectre sonore</span>
+                    <span class="selectable" aria-label="Sélectionner harmoniques">harmoniques</span>
+                    <span class="selectable" aria-label="Sélectionner densité">densité</span>
+                    <span class="selectable" aria-label="Sélectionner fondamental">fondamental</span>
+                    <span class="selectable" aria-label="Sélectionner formant">formant</span>
+                    <span class="selectable" aria-label="Sélectionner enveloppe du son">enveloppe du son</span>
+                    <span class="selectable" aria-label="Sélectionner enveloppe sonore">enveloppe sonore</span>
+                    <span class="selectable" aria-label="Sélectionner bruit">bruit</span>
+                    <span class="selectable" aria-label="Sélectionner résonance">résonance</span>
+                    <span class="selectable" aria-label="Sélectionner vibration">vibration</span>
+                    <span class="selectable" aria-label="Sélectionner fréquence">fréquence</span>
+                    <span class="selectable" aria-label="Sélectionner hauteur">hauteur</span>
+                    <span class="selectable" aria-label="Sélectionner ultrason">ultrason</span>
+                    <span class="selectable" aria-label="Sélectionner son">son</span>
+                    <span class="selectable" aria-label="Sélectionner synthèse sonore">synthèse sonore</span>
+                    <span class="selectable" aria-label="Sélectionner son de synthèse">son de synthèse</span>
+                    <span class="selectable" aria-label="Sélectionner mixage">mixage</span>
+                    <span class="selectable" aria-label="Sélectionner panoramique">panoramique</span>
+                    <span class="selectable" aria-label="Sélectionner espace">espace</span>
+                    <span class="selectable" aria-label="Sélectionner strate">strate</span>
+                    <span class="selectable" aria-label="Sélectionner sourdiner">sourdine</span>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Effets sonores</h2>
+                <div id="register-words">
+                    <span class="selectable" aria-label="Sélectionner effet">effet</span>
+                    <span class="selectable" aria-label="Sélectionner distorsion">distorsion</span>
+                    <span class="selectable" aria-label="Sélectionner filtrage">filtrage</span>
+                    <span class="selectable" aria-label="Sélectionner rétrograde">rétrograde</span>
+                    <span class="selectable" aria-label="Sélectionner stéréo">stéréo</span>
+                    <span class="selectable" aria-label="Sélectionner réverbération">réverbération</span>
+                    <span class="selectable" aria-label="Sélectionner écho">écho</span>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Techniques</h2>
+                <div id="anatomy-words">
+                    <span class="selectable" aria-label="Sélectionner arrangement">arrangement</span>
+                    <span class="selectable" aria-label="Sélectionner basse continue">basse continue</span>
+                    <span class="selectable" aria-label="Sélectionner instrumentation">instrumentation</span>
+                    <span class="selectable" aria-label="Sélectionner orchestration">orchestration</span>
+                    <span class="selectable" aria-label="Sélectionner réduction">réduction</span>
+                    <span class="selectable" aria-label="Sélectionner transcription">transcription</span>
+                </div>
+            </div>
+        </div>
+
+
+        <button onclick="returnWords()">Valider la sélection</button>
+        <button class="reset-button" onclick="clearSelection()">Annuler la sélection</button>
+        <button class="home-button" onclick="goToHomePage()">Retour à l'accueil</button>
+    </div>
+
+    <!-- Cadre de définition à droite de la page -->
+
+    <div id="definition-container">
+        <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
+        <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
+        <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
+        
+        <!-- Conteneur pour l'image -->
+        <div id="definition-image-container">
+            <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <!-- Lecteur audio -->
+        <div id="definition-audio-container">
+            <audio id="definition-audio" controls style="display: none; width: 100%; margin-top: 10px;">
+                <source id="definition-audio-source" src="" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+            </audio>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

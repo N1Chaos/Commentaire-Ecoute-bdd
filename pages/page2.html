@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effectif</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Ajoutez ces liens dans le <head> pour importer les polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <h1>EFFECTIF</h1>
+
+        <div id="categories-container">
+            
+            
+        </div>
+
+        <button onclick="returnWords()">Valider la sélection</button>
+        <button class="reset-button" onclick="clearSelection()">Annuler la sélection</button>
+        <button class="home-button" onclick="goToHomePage()">Retour à l'accueil</button>
+    </div>
+
+    <!-- Cadre de définition à droite de la page -->
+
+    <div id="definition-container">
+        <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
+        <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
+        <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
+        
+        <!-- Conteneur pour l'image -->
+        <div id="definition-image-container">
+            <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <!-- Lecteur audio -->
+        <div id="definition-audio-container">
+            <audio id="definition-audio" controls style="display: none; width: 100%; margin-top: 10px;">
+                <source id="definition-audio-source" src="" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+            </audio>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
