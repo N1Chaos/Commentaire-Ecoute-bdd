@@ -10,91 +10,52 @@
     --border-radius: 15px;
     --padding: 10px;
     --font-size: 16px;
-    --heading-font: 'Poppins', sans-serif; /* Police moderne pour les titres */
-    --body-font: 'Open Sans', sans-serif; /* Police moderne pour le texte */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
 }
 
 /* Mise en page générale */
 body {
-    display: flex;
-    height: 100vh;
-    margin: 0;
     background-color: var(--background-color);
     font-family: var(--body-font);
     color: var(--font-color);
-    flex-direction: row;
-    justify-content: flex-start;
-    overflow: auto;
-}
-
-/* Ajout d'une scrollbar à la page entière */
-html, body {
-    height: 100%;  /* Assurez-vous que le body occupe toute la hauteur */
-    overflow-y: auto;  /* Affiche une scrollbar verticale lorsque nécessaire */
-}
-
-
-/* Cadre gauche */
-.cadre-gauche {
-    width: 30%;
-    height: auto;
-    background-color: white;
-    border: 5px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: var(--padding);
-    margin-right: 10px;
     overflow-y: auto;
 }
 
-/* Boutons dans le cadre gauche */
-.button {
+/* Navigation gauche */
+.bg-light {
+    background-color: white !important;
+    border: 5px solid var(--secondary-color) !important;
+    border-radius: var(--border-radius);
+}
+
+/* Boutons de navigation */
+.btn-outline-primary {
     background-color: var(--button-color);
-    color: white;
+    color: white !important;
     border: none;
     border-radius: 5px;
     padding: 8px 15px;
     margin: 5px 0;
-    cursor: pointer;
-    text-align: center;
     width: 80%;
     transition: background-color 0.3s ease;
-    font-family: var(--body-font); /* Utilisation de la police globale */
+    font-family: var(--body-font);
     font-size: var(--font-size);
-    
 }
 
-.button:hover {
-    background-color: var(--button-hover-color);
+.btn-outline-primary:hover {
+    background-color: var(--button-hover-color) !important;
+    color: white !important;
 }
 
-/* Cadre des mots sélectionnés */
-.cadre-mots {
-    width: 30%;
-    height: auto;
-    background-color: rgb(214, 213, 213);
-    border: 5px solid var(--highlight-color);
+/* Cartes */
+.card {
     border-radius: var(--border-radius);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding);
-    overflow-y: auto;
-    font-family: var(--body-font); /* Utilisation de la police globale */
-    margin-right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
-.cadre-mots h2 {
-    font-family: var(--heading-font); /* Utilisation de la police moderne pour les titres */
-    font-size: 24px;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
+/* Zone des mots sélectionnés */
 #selectedWordsDisplay {
     display: flex;
     flex-direction: column;
@@ -111,7 +72,7 @@ html, body {
     gap: 10px;
     opacity: 1;
     transition: opacity 0.3s ease;
-    font-weight: bold; /* Mettre les mots en gras */
+    font-weight: bold;
 }
 
 .word-container.removed {
@@ -125,44 +86,9 @@ html, body {
     font-size: 20px;
 }
 
-/* Bouton pour effacer tous les mots */
-button {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 15px;
-    font-family: var(--body-font); /* Utilisation de la police globale */
-    font-size: var(--font-size);
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff3333;
-}
-
-.commentaire-container {
-    width: 100%;
-    display: flex;
-}
-
-/* Cadre bleu pour le commentaire */
-.bleu {
-    width: 90%; /* Définir la largeur du cadre */
-    background-color: white;
-    border-color: #2196f3;
-    height: 55%; /* Hauteur du cadre */
-    border: 5px solid;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Aligner le champ de texte en haut */
-    position: relative; /* Nécessaire pour positionner les éléments à l'intérieur */
-    padding: 10px;
-    overflow: hidden;
-    margin-right: 10px;
+/* Zone de commentaire */
+.bg-primary.bg-opacity-10 {
+    border: 5px solid var(--highlight-color);
 }
 
 textarea {
@@ -171,299 +97,122 @@ textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-family: var(--body-font); /* Utilisation de la police globale */
+    font-family: var(--body-font);
     font-size: var(--font-size);
 }
 
-/* Bouton "Générer un texte" */
-#generateTextButton {
-    position: absolute;
-    bottom: 10px;  /* Décalage du bouton depuis le bas du cadre */
-    right: 10px;   /* Décalage du bouton depuis le côté droit du cadre */
-    left: 10px;
-    width: 97%;
+/* Boutons */
+.btn-primary {
     background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-    font-family: var(--body-font); /* Utilisation de la police globale */
 }
 
-#generateTextButton:hover {
+.btn-primary:hover {
     background-color: var(--highlight-color);
-    transform: translateY(-2px); /* Effet de remontée au survol */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre au survol */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
-/* Cadre pour le commentaire audio*/
-.commentaire-audio {
-    left: 0;
-    width: 30%;
-    height: 55%;
-    background-color: white;
-    border: 5px solid #4caf50;
-    padding: 10px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 45%;
-    margin-right: 10px;
-    z-index: 10; /* Assure que le commentaire audio est au-dessus des autres éléments */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour ajouter de la profondeur */
-    overflow-y: auto;
+.btn-outline-danger {
+    background-color: var(--secondary-color);
+    color: white !important;
+    border: none;
 }
 
-/* Conteneur du lecteur audio */
-.audio-file-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Limite la largeur pour une meilleure présentation */
-    padding: 10px;
+.btn-outline-danger:hover {
+    background-color: #ff3333 !important;
 }
 
-/* Lecteur audio */
-#audioPlayback {
-    width: 100%;
-    height: 50px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 5px;
-    
-}
-
-/* Section des boutons d'enregistrement et de téléchargement */
-.buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Largeur de la section des boutons */
-}
-
-/* Bouton d'enregistrement */
+/* Section audio */
 #recordButton {
     background-color: #ff9800;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%; /* Remplir la largeur du conteneur */
     transition: background-color 0.3s ease;
-    font-family: var(--body-font); /* Utilisation de la police globale */
-    padding: 10px;
-    margin-bottom: 20px;
 }
 
 #recordButton:hover {
     background-color: #ff5722;
 }
 
-/* Champ de saisie pour le nom de fichier */
-#fileName {
-    width: 90%; /* Largeur complète du champ de texte */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: var(--body-font); /* Utilisation de la police globale */
-}
-
-/* Bouton de téléchargement */
 #downloadButton {
     background-color: #ac9f8d;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%; /* Largeur complète du bouton */
     transition: background-color 0.3s ease;
-    font-family: var(--body-font); /* Utilisation de la police globale */
 }
 
 #downloadButton:hover {
     background-color: #9c7b5e;
 }
 
-.media-container {
-    position: fixed;
-    top: 62%;
-    left: 37%;
-    display: flex;
-    justify-content: ;
-    width: 60%;
-    gap: 20px;
-    margin-top: 0; /* Supprimer l'ancien margin-top */
-}
-
-/* Conteneur du mini player audio */
-.audio-player-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    margin-bottom: 20px;
-}
-
-/* Mini player audio */
+/* Player audio */
 .audio-player {
-    flex: 1;
-    width: 100%;  /* Utilisez la largeur complète pour éviter de chevaucher */
-    height: 50px; /* Hauteur du lecteur audio */
-    background-color: #f1f1f1; /* Couleur de fond */
+    background-color: #f1f1f1;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 15px; /* Espacement en bas pour éviter le chevauchement avec le bouton d'upload */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    bottom: 30px;
-    right: 20px;
-    left: 20px;
 }
 
-/* Bouton d'upload pour le fichier audio */
-.audio-upload {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    border: none;
-    transition: background-color 0.3s ease;
-    width: 88%;  /* Largeur complète pour une présentation cohérente */
-    font-family: var(--body-font); /* Utilisation de la police globale */
-    right: 20px;
-    left: 20px;
-}
-
-/* Style au survol du bouton d'upload */
-.audio-upload:hover {
-    background-color: var(--button-hover-color);
-}
-
-/* Style pour le player YouTube */
+/* Player YouTube */
 .youtube-player-container {
-    flex: 1;
-
-    bottom: 30px;
-    right: 20px;
-    left: 20px;
-    width: fit-content;
-    height: fit-content;
     background-color: white;
     padding: 10px;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    flex-direction: column;
 }
 
 .youtube-player {
-    width: 100%;
-    height: 100%;
     border-radius: var(--border-radius);
 }
 
-.youtube-player-container:hover {
-    opacity: 0.8;
+/* Champ de recherche YouTube */
+#videoUrl {
+    flex-grow: 1;
+    font-family: var(--body-font);
 }
 
-/* Conteneur pour le champ de l'URL YouTube et le bouton "Charger" */
-.search-container {
-    display: flex;                   /* Utilise le flexbox pour l'alignement horizontal */
-    justify-content: space-between;   /* Place le champ et le bouton aux extrémités */
-    align-items: flex-end;             /* Centre verticalement les éléments dans le conteneur */
-    width: 95%;                       /* Largeur complète */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    height: 15%;                      /* Augmenter la hauteur pour plus d'espace */
-}
-
-/* Champ de l'URL YouTube */
-.videoUrl {
-    width: 80%;                       /* Donne 80% de l'espace au champ d'URL */
-    padding: 5px;                     /* Ajuster le padding pour équilibrer l'espacement */
-    border: none;
-    font-size: 16px;
-    flex-grow: 1;                     /* Permet au champ de texte de grandir et de remplir l'espace restant */
-    font-family: var(--body-font); /* Utilisation de la police globale */
-}
-
-/* Bouton "Charger" */
-.search-button {
-    display: flex;
-    justify-content: center;          /* Centrer le contenu du bouton horizontalement */
-    align-items: center;              /* Centrer le bouton verticalement */
+#search-button {
     background-color: #ac9f8d;
     color: white;
     border: none;
-    padding: 0px 12px;                /* Ajuster le padding pour le bouton */
-    border-radius: 5px;
-    cursor: pointer;
-    width: 25%;                       /* Vous pouvez ajuster la largeur du bouton */
     transition: background-color 0.3s ease;
-    font-family: var(--body-font); /* Utilisation de la police globale */
 }
 
-.search-button:hover {
+#search-button:hover {
     background-color: #ff0000;
 }
 
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-    body {
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
         flex-direction: column;
     }
-
-    .cadre-gauche,
-    .cadre-mots {
+    
+    .col-md-2, .col-md-10 {
+        width: 100% !important;
+    }
+    
+    .cadre-gauche, .cadre-mots {
         width: 100%;
-        height: 30%;
         margin-bottom: 10px;
     }
-
-    .cadre-container {
-        width: 100%;
-    }
-
-    .generate-file-button {
-        width: 100%;
-    }
-
-    .audio-player {
-        width: 80%; /* Réduit la largeur sur les petits écrans */
-    }
-
-    .audio-upload {
-        width: 80%; /* Réduit la largeur du bouton d'upload sur petits écrans */
-    }
 }
+
 @media (max-width: 1024px) and (orientation: portrait) {
     html {
-      transform: rotate(90deg);
-      transform-origin: left top;
-      width: 100vh;
-      height: 100vw;
-      overflow-x: hidden;
-      position: absolute;
-      top: 100%;
-      left: 0;
+        transform: rotate(90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
-  
+    
     body {
-      width: 100vh;
-      height: 100vw;
-      overflow: hidden;
+        width: 100vh;
+        height: 100vw;
+        overflow: hidden;
     }
-  }
-  
+}

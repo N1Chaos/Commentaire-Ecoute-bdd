@@ -5,17 +5,17 @@ header('Content-Type: application/json');
 try {
     $pdo = new PDO('mysql:host=localhost;dbname=vocabulaire_musical;charset=utf8', 'root', '');
 } catch (PDOException $e) {
-    echo json_encode(["error" => "Erreur de connexion à la base de données: " . $e->getMessage()]);
+    echo json_encode(["error" => "Erreur de connexion : " . $e->getMessage()]);
     exit;
 }
 
 // Requête
-$stmt = $pdo->query('SELECT nom, definition, image, audio FROM vocabulaire_musical');
+$stmt = $pdo->query('SELECT mot, definition, image, audio FROM definitions');
 
 // Construction du tableau
-$vocabulaire_musical = [];
+$definitions = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $definitions[$row['nom']] = [
+    $definitions[$row['mot']] = [
         'definition' => $row['definition'],
         'image' => $row['image'],
         'audio' => $row['audio']
@@ -24,3 +24,4 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 // Envoi JSON
 echo json_encode($definitions);
+?>

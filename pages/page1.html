@@ -1,135 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styles</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <!-- Ajoutez ces liens dans le <head> pour importer les polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styles</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- CSS personnalisé -->
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-    <div>
-        <h1>STYLES</h1>
-        <div class="image-container">
-        <img src="../images/frise.jpg" alt="frise chronologique" class="centered-image">
-        
-        </div>
-        <div class="image-container">
-        <img src="../images/nuage_styles.jpg" alt="nuage de mots" class="centered-image">
-            
-        </div>
-        <div id="categories-container">
-            <div class="category">
-                <h2>Musique occidentale de tradition écrite</h2>
-                <div id="mote-words">
-                    <span class="selectable" aria-label="Sélectionner musique occidentale de tradition écrite">musique occidentale de tradition écrite</span>
-                    <span class="selectable" aria-label="Sélectionner musique du Moyen-Age">musique du Moyen-Age</span>
-                    <span class="selectable" aria-label="Sélectionner musique de la Renaissance">musique de la Renaissance</span>
-                    <span class="selectable" aria-label="Sélectionner style baroque">style baroque</span>
-                    <span class="selectable" aria-label="Sélectionner style classique">style classique</span>
-                    <span class="selectable" aria-label="Sélectionner style romantique">style romantique</span>
-                    <span class="selectable" aria-label="Sélectionner musique moderne">musique moderne</span>
-                    <span class="selectable" aria-label="Sélectionner musique contemporaine">musique contemporaine</span>
-                </div>
-            </div>
+  <div class="container py-4">
+    <h1 class="text-center">STYLES</h1>
 
-            <div class="category">
-                <h2>Musiques traditionnelles</h2>
-                <div id="orale-words">
-                    <span class="selectable" aria-label="Sélectionner musiques traditionnelles / folk">musiques traditionnelles / folk</span>
-                    <span class="selectable" aria-label="Sélectionner musique celtique">musique celtique</span>
-                    <span class="selectable" aria-label="Sélectionner flamenco">flamenco</span>
-                    <span class="selectable" aria-label="Sélectionner fado">fado</span>
-                    <span class="selectable" aria-label="Sélectionner gnawa">gnawa</span>
-                    <span class="selectable" aria-label="Sélectionner blues traditionnel">blues traditionnel</span>
-                    <span class="selectable" aria-label="Sélectionner musique africaine">musique africaine</span>
-                    
-                    
-
-                    
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Musiques populaires modernes</h2>
-                <div id="anatomy-words">
-                    <span class="selectable" aria-label="Sélectionner musiques populaires modernes">musiques populaires modernes</span>
-                    <span class="selectable" aria-label="Sélectionner jazz">jazz</span>
-                    <span class="selectable" aria-label="Sélectionner rock">rock</span>
-                    <span class="selectable" aria-label="Sélectionner reggae">reggae</span>
-                    <span class="selectable" aria-label="Sélectionner rap">rap</span>
-                    
-                </div>
-            </div>
-        </div>
-        <div id="categories-container">
-            <div class="category">
-                <h2>Musiques du monde</h2>
-                <div id="mote-words">
-                    <span class="selectable" aria-label="Sélectionner musiques du monde">musiques du monde</span>
-                    <span class="selectable" aria-label="Sélectionner samba">samba</span>
-                    <span class="selectable" aria-label="Sélectionner raga">raga</span>
-                    <span class="selectable" aria-label="Sélectionner musique arabo-andalouse">musique arabo-andalouse</span>
-                    <span class="selectable" aria-label="Sélectionner chants pygmées">chants pygmées</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Musiques rituelles ou spirituelles</h2>
-                <div id="orale-words">
-                    <span class="selectable" aria-label="Sélectionner musiques rituelles ou spirituelles">musiques rituelles ou spirituelles</span>
-                    <span class="selectable" aria-label="Sélectionner chamanisme">chamanisme</span>
-                    <span class="selectable" aria-label="Sélectionner gospel">gospel</span>
-                    <span class="selectable" aria-label="Sélectionner qawwali">qawwali</span>
-                  
-
-                    
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Ecriture et oralité</h2>
-                <div id="anatomy-words">
-                    <span class="selectable" aria-label="Sélectionner musique de tradition orale">musique de tradition orale</span>
-                    <span class="selectable" aria-label="Sélectionner musique de tradition écrite">musique de tradition écrite</span>
-                    <span class="selectable" aria-label="Sélectionner cas hybrides">cas hybrides</span>
-                    <span class="selectable" aria-label="Sélectionner musique populaire">musique populaire</span>
-                    <span class="selectable" aria-label="Sélectionner musique savante">musique savante</span>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <button onclick="returnWords()">Valider la sélection</button>
-        <button class="reset-button" onclick="clearSelection()">Annuler la sélection</button>
-        <button class="home-button" onclick="goToHomePage()">Retour à l'accueil</button>
+    <!-- Images -->
+    <div class="text-center mb-4">
+      <img src="../images/frise.jpg" alt="frise chronologique" class="img-fluid rounded shadow mb-3">
+      <img src="../images/nuage_styles.jpg" alt="nuage de mots" class="img-fluid rounded shadow">
     </div>
 
-    <!-- Cadre de définition à droite de la page -->
-
-    <div id="definition-container">
-        <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
-        <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
-        <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
-        
-        <!-- Conteneur pour l'image -->
-        <div id="definition-image-container">
-            <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+    <!-- Première rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Musique occidentale</h2>
+          <div>
+            <span class="selectable">musique du Moyen-Age</span>
+            <span class="selectable">musique de la Renaissance</span>
+            <span class="selectable">style baroque</span>
+            <span class="selectable">style classique</span>
+            <span class="selectable">style romantique</span>
+            <span class="selectable">musique moderne</span>
+            <span class="selectable">musique contemporaine</span>
+          </div>
         </div>
+      </div>
 
-        <!-- Lecteur audio -->
-        <div id="definition-audio-container">
-            <audio id="definition-audio" controls style="display: none; width: 100%; margin-top: 10px;">
-                <source id="definition-audio-source" src="" type="audio/mpeg">
-                Votre navigateur ne supporte pas l'élément audio.
-            </audio>
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Musiques traditionnelles</h2>
+          <div>
+            <span class="selectable">musique celtique</span>
+            <span class="selectable">flamenco</span>
+            <span class="selectable">fado</span>
+            <span class="selectable">gnawa</span>
+            <span class="selectable">blues traditionnel</span>
+            <span class="selectable">musique africaine</span>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Musiques populaires</h2>
+          <div>
+            <span class="selectable">jazz</span>
+            <span class="selectable">rock</span>
+            <span class="selectable">reggae</span>
+            <span class="selectable">rap</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="../js/script.js"></script>
+    <!-- Deuxième rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Musiques du monde</h2>
+          <div>
+            <span class="selectable">samba</span>
+            <span class="selectable">raga</span>
+            <span class="selectable">musique arabo-andalouse</span>
+            <span class="selectable">chants pygmées</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Musiques spirituelles</h2>
+          <div>
+            <span class="selectable">chamanisme</span>
+            <span class="selectable">gospel</span>
+            <span class="selectable">qawwali</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Traditions</h2>
+          <div>
+            <span class="selectable">musique de tradition orale</span>
+            <span class="selectable">musique de tradition écrite</span>
+            <span class="selectable">musique populaire</span>
+            <span class="selectable">musique savante</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boutons -->
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <button class="btn btn-success w-100" onclick="returnWords()">
+          <i class="bi bi-check-circle-fill me-2"></i>Valider la sélection
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger w-100" onclick="clearSelection()">
+          <i class="bi bi-x-circle-fill me-2"></i>Annuler la sélection
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary w-100" onclick="goToHomePage()">
+          <i class="bi bi-house-door-fill me-2"></i>Retour à l'accueil
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panneau latéral de définition -->
+  <div id="definition-container">
+    <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
+    <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
+    <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
+
+    <div id="definition-image-container">
+      <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto;">
+    </div>
+
+    <div id="definition-audio-container">
+      <audio id="definition-audio" controls style="display: none; width: 100%;">
+        <source id="definition-audio-source" src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + script personnalisé -->
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,16 +3,16 @@ CREATE DATABASE IF NOT EXISTS vocabulaire_musical;
 USE vocabulaire_musical;
 
 -- Création de la table vocabulaire_musical
-CREATE TABLE IF NOT EXISTS vocabulaire_musical (
+CREATE TABLE IF NOT EXISTS  (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
     definition TEXT NOT NULL,
-    image VARCHAR(255),   -- lien ou nom de fichier image
-    audio VARCHAR(255)    -- lien ou nom de fichier audio
+    image VARCHAR(255),   -- champ pour lien ou nom de fichier image
+    audio VARCHAR(255)
 );
 
 -- Insertion des données
-INSERT INTO vocabulaire_musical (nom, definition, image, audio) VALUES
+INSERT INTO definitions (nom, definition, image, audio) VALUES
 ('Latin', 'Langue indo-européenne de l\'Antiquité parlée à Rome et en Italie, à l\'origine des langues romanes modernes et utilisée longtemps comme langue savante en Europe.', NULL, NULL),
 ('Grec', 'Langue indo-européenne parlée en Grèce antique, connue pour ses grands textes littéraires, philosophiques et scientifiques en grec ancien, ancêtre du grec moderne.', NULL, NULL),
 ('Langues créoles', 'Langues nées du contact entre plusieurs langues, devenues langues maternelles, souvent issues de situations coloniales, comme le créole haïtien ou le créole réunionnais.', NULL, NULL),

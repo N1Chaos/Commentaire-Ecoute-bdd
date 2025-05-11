@@ -1,164 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instruments</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <!-- Ajoutez ces liens dans le <head> pour importer les polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instruments</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- CSS personnalisé -->
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-    <div>
-        <h1>INSTRUMENTS</h1>
+  <div class="container py-4">
+    <h1 class="text-center">INSTRUMENTS</h1>
 
-        <div id="categories-container">
-            <div class="category">
-                <h2>Cordes frottées</h2>
-                <div id="category-words">
-                    <span class="selectable" aria-label="Sélectionner violon">violon</span>
-                    <span class="selectable" aria-label="Sélectionner violon alto">violon alto</span>
-                    <span class="selectable" aria-label="Sélectionner violoncelle">violoncelle</span>
-                    <span class="selectable" aria-label="Sélectionner contrebasse">contrebasse</span>
-                    <span class="selectable" aria-label="Sélectionner archet">archet</span>
-                </div>
-            </div>
+    <!-- Images (optionnelles) -->
+    <!-- <div class="text-center mb-4">
+      <img src="../images/instruments.jpg" alt="instruments musicaux" class="img-fluid rounded shadow">
+    </div> -->
 
-            <div class="category">
-                <h2>Cordes pincées</h2>
-                <div id="register-words">
-                    <span class="selectable" aria-label="Sélectionner guitare">guitare</span>
-                    <span class="selectable" aria-label="Sélectionner harpe">harpe</span>
-                    <span class="selectable" aria-label="Sélectionner clavecin">clavecin</span>
-                    <span class="selectable" aria-label="Sélectionner guitare électrique">guitare électrique</span>
-                    <span class="selectable" aria-label="Sélectionner basse électrique">basse électrique</span>
-                   
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Cordes frappées</h2>
-                <div id="anatomy-words">
-                    <span class="selectable" aria-label="Sélectionner piano">piano</span>
-                    
-               
-                   
-                </div>
-        </div>    
+    <!-- Première rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Cordes frottées</h2>
+          <div>
+            <span class="selectable">violon</span>
+            <span class="selectable">violon alto</span>
+            <span class="selectable">violoncelle</span>
+            <span class="selectable">contrebasse</span>
+            <span class="selectable">archet</span>
+          </div>
         </div>
-
-        <div id="second-row-container">
-            <div class="category">
-                <h2>Vents</h2>
-                <div id="technique-words">
-                    <span class="selectable" aria-label="Sélectionner bois">bois</span>
-                    <span class="selectable" aria-label="Sélectionner cuivres">cuivres</span>
-                </div>
-            </div>
-            <div class="category">
-                <h2>Bois</h2>
-                <div id="vocal-words">
-                    <span class="selectable" aria-label="Sélectionner flûte traversière">flûte traversière</span>
-                    <span class="selectable" aria-label="Sélectionner flûte à bec">flûte à bec</span>
-                    <span class="selectable" aria-label="Sélectionner clarinette">clarinette</span>
-                    <span class="selectable" aria-label="Sélectionner cor de basset">cor de basset</span>
-                    <span class="selectable" aria-label="Sélectionner saxophone">saxophone</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Cuivres</h2>
-                <div id="technique-words">
-                    <span class="selectable" aria-label="Sélectionner trompette">trompette</span>
-                    <span class="selectable" aria-label="Sélectionner cor">cor</span>
-                    <span class="selectable" aria-label="Sélectionner trombone">trombone</span>
-                    <span class="selectable" aria-label="Sélectionner tuba">tuba</span>
-                </div>
-            </div>
-
-           
+      </div>
+      
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Cordes pincées</h2>
+          <div>
+            <span class="selectable">guitare</span>
+            <span class="selectable">harpe</span>
+            <span class="selectable">clavecin</span>
+            <span class="selectable">guitare électrique</span>
+            <span class="selectable">basse électrique</span>
+          </div>
         </div>
-        
-        <div id="third-row-container">
-            <div class="category">
-                <h2>Percussions...</h2>
-                <div id="vocal-words">
-                    <span class="selectable" aria-label="Sélectionner percussions">percussions</span>
-                    <span class="selectable" aria-label="Sélectionner percussions à peau">percussions à peau</span>
-                    <span class="selectable" aria-label="Sélectionner percussions en bois">percussions en bois</span>
-                    <span class="selectable" aria-label="Sélectionner percussions métalliques">percussions métalliques</span>
-                   
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>... à hauteur indéterminée</h2>
-                <div id="technique-words">
-                    <span class="selectable" aria-label="Sélectionner batterie">batterie</span>
-                    <span class="selectable" aria-label="Sélectionner caisse claire">caisse claire</span>
-                    <span class="selectable" aria-label="Sélectionner grosse caisse">grosse caisse</span>
-                    <span class="selectable" aria-label="Sélectionner tom">tom</span>
-                    <span class="selectable" aria-label="Sélectionner cymbales">cymbales</span>
-                    <span class="selectable" aria-label="Sélectionner charlestone">charlestone</span>
-                    <span class="selectable" aria-label="Sélectionner tambourin">tambourin</span>
-                    <span class="selectable" aria-label="Sélectionner triangle">triangle</span>
-                    <span class="selectable" aria-label="Sélectionner woodblock">woodblock</span>
-                    <span class="selectable" aria-label="Sélectionner claves">claves</span>
-                    <span class="selectable" aria-label="Sélectionner guiro">guiro</span>
-                    <span class="selectable" aria-label="Sélectionner congas">congas</span>
-                    <span class="selectable" aria-label="Sélectionner bongos">bongos</span>
-                    <span class="selectable" aria-label="Sélectionner djembe">djembe</span>
-                    <span class="selectable" aria-label="Sélectionner timbales latines">timbales latines</span>
-                    <span class="selectable" aria-label="Sélectionner shaker">shaker</span>
-                    <span class="selectable" aria-label="Sélectionner maracas">maracas</span>
-                    <span class="selectable" aria-label="Sélectionner tambour de basque">tambour de basque</span>
-                    <span class="selectable" aria-label="Sélectionner tam-tam">tam-tam</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>... à hauteur déterminée</h2>
-                <div id="expiration-words">
-                    <span class="selectable" aria-label="Sélectionner timbales">timbales</span>
-                    <span class="selectable" aria-label="Sélectionner xylophone">xylophone</span>
-                    <span class="selectable" aria-label="Sélectionner marimba">marimba</span>
-                    <span class="selectable" aria-label="Sélectionner vibraphone">vibraphone</span>
-                    <span class="selectable" aria-label="Sélectionner glockenspiel">glockenspiel</span>
-                    <span class="selectable" aria-label="Sélectionner cloches tubulaires">cloches tubulaires</span>
-                    <span class="selectable" aria-label="Sélectionner célesta">célesta</span>
-                    <span class="selectable" aria-label="Sélectionner gong">gong</span>
-                </div>
-            </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Cordes frappées</h2>
+          <div>
+            <span class="selectable">piano</span>
+          </div>
         </div>
-        <button onclick="returnWords()">Valider la sélection</button>
-        <button class="reset-button" onclick="clearSelection()">Annuler la sélection</button>
-        <button class="home-button" onclick="goToHomePage()">Retour à l'accueil</button>
+      </div>
     </div>
 
-    <!-- Cadre de définition à droite de la page -->
-
-    <div id="definition-container">
-        <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
-        <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
-        <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
-        
-        <!-- Conteneur pour l'image -->
-        <div id="definition-image-container">
-            <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+    <!-- Deuxième rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Vents</h2>
+          <div>
+            <span class="selectable">bois</span>
+            <span class="selectable">cuivres</span>
+          </div>
         </div>
-
-        <!-- Lecteur audio -->
-        <div id="definition-audio-container">
-            <audio id="definition-audio" controls style="display: none; width: 100%; margin-top: 10px;">
-                <source id="definition-audio-source" src="" type="audio/mpeg">
-                Votre navigateur ne supporte pas l'élément audio.
-            </audio>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Bois</h2>
+          <div>
+            <span class="selectable">flûte traversière</span>
+            <span class="selectable">flûte à bec</span>
+            <span class="selectable">clarinette</span>
+            <span class="selectable">cor de basset</span>
+            <span class="selectable">saxophone</span>
+          </div>
         </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Cuivres</h2>
+          <div>
+            <span class="selectable">trompette</span>
+            <span class="selectable">cor</span>
+            <span class="selectable">trombone</span>
+            <span class="selectable">tuba</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="../js/script.js"></script>
+    <!-- Troisième rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Percussions</h2>
+          <div>
+            <span class="selectable">percussions à peau</span>
+            <span class="selectable">percussions en bois</span>
+            <span class="selectable">percussions métalliques</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Percussions (hauteur indéterminée)</h2>
+          <div>
+            <span class="selectable">batterie</span>
+            <span class="selectable">caisse claire</span>
+            <span class="selectable">grosse caisse</span>
+            <span class="selectable">tom</span>
+            <span class="selectable">cymbales</span>
+            <span class="selectable">tambourin</span>
+            <span class="selectable">triangle</span>
+            <span class="selectable">congas</span>
+            <span class="selectable">bongos</span>
+            <span class="selectable">djembe</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Percussions (hauteur déterminée)</h2>
+          <div>
+            <span class="selectable">timbales</span>
+            <span class="selectable">xylophone</span>
+            <span class="selectable">marimba</span>
+            <span class="selectable">vibraphone</span>
+            <span class="selectable">glockenspiel</span>
+            <span class="selectable">célesta</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Boutons -->
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <button class="btn btn-success w-100" onclick="returnWords()">
+          <i class="bi bi-check-circle-fill me-2"></i>Valider la sélection
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger w-100" onclick="clearSelection()">
+          <i class="bi bi-x-circle-fill me-2"></i>Annuler la sélection
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary w-100" onclick="goToHomePage()">
+          <i class="bi bi-house-door-fill me-2"></i>Retour à l'accueil
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panneau latéral de définition -->
+  <div id="definition-container">
+    <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
+    <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
+    <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
+
+    <div id="definition-image-container">
+      <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto;">
+    </div>
+
+    <div id="definition-audio-container">
+      <audio id="definition-audio" controls style="display: none; width: 100%;">
+        <source id="definition-audio-source" src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + script personnalisé -->
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

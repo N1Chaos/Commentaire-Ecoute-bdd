@@ -1,176 +1,209 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forme / Structure</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <!-- Ajoutez ces liens dans le <head> pour importer les polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forme / Structure</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- CSS personnalisé -->
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-    <div>
-        <h1>FORME / STRUCTURE</h1>
+  <div class="container py-4">
+    <h1 class="text-center">FORME / STRUCTURE</h1>
 
-        <div id="categories-container">
-            <div class="category">
-                <h2>Formes diverses</h2>
-                <div id="diverses-words">
-                    <span class="selectable" aria-label="Sélectionner forme à thèmes">forme à thèmes</span>
-                    <span class="selectable" aria-label="Sélectionner forme bipartite">forme bipartite</span>
-                    <span class="selectable" aria-label="Sélectionner forme continue">forme continue</span>
-                    <span class="selectable" aria-label="Sélectionner forme ouverte">forme ouverte</span>
-                    <span class="selectable" aria-label="Sélectionner forme par argument">forme par argument</span>
-                    <span class="selectable" aria-label="Sélectionner forme strophique">forme strophique</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Parties</h2>
-                <div id="parties-words">
-                    <span class="selectable" aria-label="Sélectionner break">break</span>
-                    <span class="selectable" aria-label="Sélectionner cellule">cellule</span>
-                    <span class="selectable" aria-label="Sélectionner couplet">couplet</span>
-                    <span class="selectable" aria-label="Sélectionner développement">développement</span>
-                    <span class="selectable" aria-label="Sélectionner élément">élément</span>
-                    <span class="selectable" aria-label="Sélectionner exposition">exposition</span>
-                    <span class="selectable" aria-label="Sélectionner partie">partie</span>
-                    <span class="selectable" aria-label="Sélectionner phrase">phrase</span>
-                    <span class="selectable" aria-label="Sélectionner refrain">refrain</span>
-                    <span class="selectable" aria-label="Sélectionner strophe">strophe</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Formes avec répétition</h2>
-                <div id="répétition-words">
-                    <span class="selectable" aria-label="Sélectionner ABA">ABA</span>
-                    <span class="selectable" aria-label="Sélectionner antienne">antienne</span>
-                    <span class="selectable" aria-label="Sélectionner cyclique">cyclique</span>
-                    <span class="selectable" aria-label="Sélectionner da capo">da capo</span>
-                    <span class="selectable" aria-label="Sélectionner fugue">fugue</span>
-                    <span class="selectable" aria-label="Sélectionner ground / chaconne / passacaille">ground / chaconne / passacaille</span>
-                    <span class="selectable" aria-label="Sélectionner marche">marche</span>
-                    <span class="selectable" aria-label="Sélectionner petit rondo (ABA C ABA)">petit rondo (ABA C ABA)</span>
-                    <span class="selectable" aria-label="Sélectionner reprise">reprise</span>
-                    <span class="selectable" aria-label="Sélectionner rondeau">rondeau</span>
-                    <span class="selectable" aria-label="Sélectionner rondo">rondo</span>
-                    <span class="selectable" aria-label="Sélectionner thème et variations">thème et variations</span>
-                    <span class="selectable" aria-label="Sélectionner variation">variation</span>
-                </div>
-            </div>
+    <!-- Première rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Formes diverses</h2>
+          <div>
+            <span class="selectable">forme à thèmes</span>
+            <span class="selectable">forme bipartite</span>
+            <span class="selectable">forme continue</span>
+            <span class="selectable">forme ouverte</span>
+            <span class="selectable">forme par argument</span>
+            <span class="selectable">forme strophique</span>
+          </div>
         </div>
+      </div>
 
-        <div id="second-row-container">
-            <div class="category">
-                <h2>Éléments répétés</h2>
-                <div id="éléments-words">
-                    <span class="selectable" aria-label="Sélectionner basse obstinée">basse obstinée</span>
-                    <span class="selectable" aria-label="Sélectionner boucle">boucle</span>
-                    <span class="selectable" aria-label="Sélectionner leitmotiv">leitmotiv</span>
-                    <span class="selectable" aria-label="Sélectionner motif">motif</span>
-                    <span class="selectable" aria-label="Sélectionner ostinato mélodique, rythmique ou mélodico-rythmique">ostinato mélodique, rythmique ou mélodico-rythmique</span>
-                    <span class="selectable" aria-label="Sélectionner récurrence">récurrence</span>
-                    <span class="selectable" aria-label="Sélectionner répétition">répétition</span>
-                    <span class="selectable" aria-label="Sélectionner sample">sample</span>
-                    <span class="selectable" aria-label="Sélectionner sujet">sujet</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2>Fugue</h2>
-                <div id="fugue-words">
-                    <span class="selectable" aria-label="Sélectionner canon">canon</span>
-                    <span class="selectable" aria-label="Sélectionner canzone">canzone</span>
-                    <span class="selectable" aria-label="Sélectionner chaconne">chaconne</span>
-                    <span class="selectable" aria-label="Sélectionner contre-sujet">contre-sujet</span>
-                    <span class="selectable" aria-label="Sélectionner contrepoint">contrepoint</span>
-                    <span class="selectable" aria-label="Sélectionner développement">développement</span>
-                    <span class="selectable" aria-label="Sélectionner fantaisie">fantaisie</span>
-                    <span class="selectable" aria-label="Sélectionner fugato">fugato</span>
-                    <span class="selectable" aria-label="Sélectionner fuguette">fuguette</span>
-                    <span class="selectable" aria-label="Sélectionner fughetta">fughetta</span>
-                    <span class="selectable" aria-label="Sélectionner imitation">imitation</span>
-                    <span class="selectable" aria-label="Sélectionner motet">motet</span>
-                    <span class="selectable" aria-label="Sélectionner réponse / comes">réponse / comes</span>
-                    <span class="selectable" aria-label="Sélectionner ricercare">ricercare</span>
-                    <span class="selectable" aria-label="Sélectionner sujet / thème / dux">sujet / thème / dux</span>
-                </div>
-            </div>
-        
-            <div class="category">
-                <h2>Divers</h2>
-                <div id="divers-words">
-                    <span class="selectable" aria-label="Sélectionner air">air</span>
-                    <span class="selectable" aria-label="Sélectionner aléatoire">aléatoire</span>
-                    <span class="selectable" aria-label="Sélectionner aria">aria</span>
-                    <span class="selectable" aria-label="Sélectionner contraste">contraste</span>
-                    <span class="selectable" aria-label="Sélectionner dialogue">dialogue</span>
-                    <span class="selectable" aria-label="Sélectionner échelle">échelle</span>
-                    <span class="selectable" aria-label="Sélectionner lamento">lamento</span>
-                    <span class="selectable" aria-label="Sélectionner mouvement">mouvement</span>
-                    <span class="selectable" aria-label="Sélectionner programme">programme</span>
-                    <span class="selectable" aria-label="Sélectionner réponse">réponse</span>
-                    <span class="selectable" aria-label="Sélectionner rupture">rupture</span>
-                    <span class="selectable" aria-label="Sélectionner scherzo">scherzo</span>
-                    <span class="selectable" aria-label="Sélectionner ternaire">ternaire</span>
-                </div>
-            </div>
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Parties</h2>
+          <div>
+            <span class="selectable">break</span>
+            <span class="selectable">cellule</span>
+            <span class="selectable">couplet</span>
+            <span class="selectable">développement</span>
+            <span class="selectable">élément</span>
+            <span class="selectable">exposition</span>
+            <span class="selectable">partie</span>
+            <span class="selectable">phrase</span>
+            <span class="selectable">refrain</span>
+            <span class="selectable">strophe</span>
+          </div>
         </div>
-        
-        <div id="third-row-container">
-            <div class="category">
-                <h2>Musique improvisée</h2>
-                <div id="impro-words">
-                    <span class="selectable" aria-label="Sélectionner grille">grille</span>
-                    <span class="selectable" aria-label="Sélectionner improvisation">improvisation</span>
-                </div>
-            </div>
+      </div>
 
-            <div class="category">
-                <h2>Danses</h2>
-                <div id="danses-words">
-                    <span class="selectable" aria-label="Sélectionner chaconne">chaconne</span>
-                    <span class="selectable" aria-label="Sélectionner gavotte">gavotte</span>
-                    <span class="selectable" aria-label="Sélectionner sarabande">sarabande</span>
-                </div>
-            </div>
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Formes avec répétition</h2>
+          <div>
+            <span class="selectable">ABA</span>
+            <span class="selectable">antienne</span>
+            <span class="selectable">cyclique</span>
+            <span class="selectable">da capo</span>
+            <span class="selectable">fugue</span>
+            <span class="selectable">ground / chaconne / passacaille</span>
+            <span class="selectable">marche</span>
+            <span class="selectable">petit rondo (ABA C ABA)</span>
+            <span class="selectable">reprise</span>
+            <span class="selectable">rondeau</span>
+            <span class="selectable">rondo</span>
+            <span class="selectable">thème et variations</span>
+            <span class="selectable">variation</span>
+          </div>
         </div>
-
-        <button onclick="returnWords()">Valider la sélection</button>
-        <button class="reset-button" onclick="clearSelection()">Annuler la sélection</button>
-        <button class="home-button" onclick="goToHomePage()">Retour à l'accueil</button>
+      </div>
     </div>
 
-    <!-- Cadre de définition à droite de la page -->
-
-    <div id="definition-container">
-        <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
-        <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
-        <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
-        
-        <!-- Conteneur pour l'image -->
-        <div id="definition-image-container">
-            <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+    <!-- Deuxième rangée -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Éléments répétés</h2>
+          <div>
+            <span class="selectable">basse obstinée</span>
+            <span class="selectable">boucle</span>
+            <span class="selectable">leitmotiv</span>
+            <span class="selectable">motif</span>
+            <span class="selectable">ostinato mélodique, rythmique ou mélodico-rythmique</span>
+            <span class="selectable">récurrence</span>
+            <span class="selectable">répétition</span>
+            <span class="selectable">sample</span>
+            <span class="selectable">sujet</span>
+          </div>
         </div>
+      </div>
 
-        <!-- Lecteur audio -->
-        <div id="definition-audio-container">
-            <audio id="definition-audio" controls style="display: none; width: 100%; margin-top: 10px;">
-                <source id="definition-audio-source" src="" type="audio/mpeg">
-                Votre navigateur ne supporte pas l'élément audio.
-            </audio>
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Fugue</h2>
+          <div>
+            <span class="selectable">canon</span>
+            <span class="selectable">canzone</span>
+            <span class="selectable">chaconne</span>
+            <span class="selectable">contre-sujet</span>
+            <span class="selectable">contrepoint</span>
+            <span class="selectable">développement</span>
+            <span class="selectable">fantaisie</span>
+            <span class="selectable">fugato</span>
+            <span class="selectable">fuguette</span>
+            <span class="selectable">fughetta</span>
+            <span class="selectable">imitation</span>
+            <span class="selectable">motet</span>
+            <span class="selectable">réponse / comes</span>
+            <span class="selectable">ricercare</span>
+            <span class="selectable">sujet / thème / dux</span>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="category">
+          <h2>Divers</h2>
+          <div>
+            <span class="selectable">air</span>
+            <span class="selectable">aléatoire</span>
+            <span class="selectable">aria</span>
+            <span class="selectable">contraste</span>
+            <span class="selectable">dialogue</span>
+            <span class="selectable">échelle</span>
+            <span class="selectable">lamento</span>
+            <span class="selectable">mouvement</span>
+            <span class="selectable">programme</span>
+            <span class="selectable">réponse</span>
+            <span class="selectable">rupture</span>
+            <span class="selectable">scherzo</span>
+            <span class="selectable">ternaire</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="../js/script.js"></script>
+    <!-- Troisième rangée -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="category">
+          <h2>Musique improvisée</h2>
+          <div>
+            <span class="selectable">grille</span>
+            <span class="selectable">improvisation</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-6">
+        <div class="category">
+          <h2>Danses</h2>
+          <div>
+            <span class="selectable">chaconne</span>
+            <span class="selectable">gavotte</span>
+            <span class="selectable">sarabande</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boutons -->
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <button class="btn btn-success w-100" onclick="returnWords()">
+          <i class="bi bi-check-circle-fill me-2"></i>Valider la sélection
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger w-100" onclick="clearSelection()">
+          <i class="bi bi-x-circle-fill me-2"></i>Annuler la sélection
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary w-100" onclick="goToHomePage()">
+          <i class="bi bi-house-door-fill me-2"></i>Retour à l'accueil
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panneau latéral de définition -->
+  <div id="definition-container">
+    <span id="close-definition" onclick="closeDefinition()" aria-label="Fermer la définition" title="Fermer la définition">×</span>
+    <h2 id="definition-title">Sélectionnez un mot pour voir la définition</h2>
+    <p id="definition-text">Cliquez sur un mot pour afficher sa définition ici.</p>
+
+    <div id="definition-image-container">
+      <img id="definition-image" src="" alt="Image illustrative" style="display: none; max-width: 100%; height: auto;">
+    </div>
+
+    <div id="definition-audio-container">
+      <audio id="definition-audio" controls style="display: none; width: 100%;">
+        <source id="definition-audio-source" src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + script personnalisé -->
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-        
-        
-
