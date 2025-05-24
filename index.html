@@ -57,7 +57,11 @@
                 <div class="col-md-8 mb-4">
                     <div class="card bg-primary bg-opacity-10 h-100">
                         <div class="card-body">
-                            <textarea id="commentText" class="form-control h-75" placeholder="Écrivez votre commentaire"></textarea>
+                           <textarea id="commentText" 
+          class="form-control" 
+          style="min-height: 120px; resize: vertical"
+          rows="5"
+          placeholder="Écrivez votre commentaire"></textarea>
                             <button class="btn btn-primary mt-3" id="generateTextButton" onclick="generateTextFile()">
                                 <i class="bi bi-file-earmark-text"></i> Générer un fichier texte
                             </button>
